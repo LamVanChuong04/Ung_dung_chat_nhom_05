@@ -22,14 +22,14 @@ namespace UngDungChat1_1
             InitializeComponent();
         }
 
-        string constring = "Data Source=DESKTOP-IRECBMN\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Trust Server Certificate=True";
+        string constring = "Data Source=DESKTOP-V1Q8O89\\MSSQLSERVER01;Initial Catalog=chat;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         private void Form2_Load(object sender, EventArgs e)
         {
             label2.Text = "Email Name";
             SqlConnection con = new SqlConnection(constring);
             con.Open();
-            string q = "select * from Login WHERE email = '" + label2.Text + "'";
+            string q = "select * from login WHERE email = '" + label2.Text + "'";
 
             SqlCommand cmd = new SqlCommand(q, con);
 

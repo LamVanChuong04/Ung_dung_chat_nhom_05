@@ -19,7 +19,9 @@ namespace UngDungChat1_1
         {
             InitializeComponent();
         }
-        string constring = "Data Source=DESKTOP-IRECBMN\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Trust Server Certificate=True";
+        string constring = "Data Source=DESKTOP-V1Q8O89\\MSSQLSERVER01;Initial Catalog=chat;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -51,78 +53,106 @@ namespace UngDungChat1_1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (!ValidateInput()) return;
+
+            if (passwordText.Text != confirmText.Text)
+            {
+                MessageBox.Show("Passwords do not match.");
+                return;
+            }
+
+            RegisterUser();
+        }
+
+        private bool ValidateInput()
+        {
+            bool isValid = true;
+
             if (string.IsNullOrEmpty(firstnameText.Text.Trim()))
             {
-                errorProvider1.SetError(firstnameText, "firstname is required");
-                return;
+                errorProvider1.SetError(firstnameText, "Firstname is required");
+                isValid = false;
             }
             else
             {
                 errorProvider1.SetError(firstnameText, string.Empty);
             }
+
             if (string.IsNullOrEmpty(lastnameText.Text.Trim()))
             {
-                errorProvider1.SetError(lastnameText, "lastname is required");
-                return;
+                errorProvider1.SetError(lastnameText, "Lastname is required");
+                isValid = false;
             }
             else
             {
                 errorProvider1.SetError(lastnameText, string.Empty);
             }
+
             if (string.IsNullOrEmpty(emailText.Text.Trim()))
             {
-                errorProvider1.SetError(emailText, "email is required");
-                return;
+                errorProvider1.SetError(emailText, "Email is required");
+                isValid = false;
             }
             else
             {
                 errorProvider1.SetError(emailText, string.Empty);
             }
+
             if (string.IsNullOrEmpty(passwordText.Text.Trim()))
             {
-                errorProvider1.SetError(passwordText, "password is required");
-                return;
+                errorProvider1.SetError(passwordText, "Password is required");
+                isValid = false;
             }
             else
             {
                 errorProvider1.SetError(passwordText, string.Empty);
             }
+
             if (string.IsNullOrEmpty(confirmText.Text.Trim()))
             {
-                errorProvider1.SetError(confirmText, "firstname is required");
-                return;
+                errorProvider1.SetError(confirmText, "Confirm password is required");
+                isValid = false;
             }
             else
             {
                 errorProvider1.SetError(confirmText, string.Empty);
             }
 
-            if (passwordText.Text != confirmText.Text)
-                MessageBox.Show("password not equal");
-            else
+            return isValid;
+        }
+
+        private void RegisterUser()
+        {
+            using (SqlConnection con = new SqlConnection(constring))
             {
-                SqlConnection con = new SqlConnection(constring);
                 con.Open();
-                string q = "insert into Login(firstname, lastname, email, password, confirmpass, image)values(@firstname,@lastname,@email, @password, @confirmpass, @image)";
-                SqlCommand cmd = new SqlCommand(q, con);
-                MemoryStream me = new MemoryStream();
-                cmd.Parameters.AddWithValue("firstname", firstnameText.Text);
-                cmd.Parameters.AddWithValue("lastname", lastnameText.Text);
-                cmd.Parameters.AddWithValue("email", emailText.Text);
-                cmd.Parameters.AddWithValue("password", passwordText.Text);
-                cmd.Parameters.AddWithValue("confirmpass", confirmText.Text);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Registration successfully. .... ");
-                firstnameText.Clear();
-                lastnameText.Clear();
-                emailText.Clear();
-                passwordText.Clear();
-                confirmText.Clear();
-                con.Close();
+                string q = "INSERT INTO Login(firstname, lastname, email, password, confirmpass) VALUES (@firstname, @lastname, @email, @password, @confirmpass)";
+                using (SqlCommand cmd = new SqlCommand(q, con))
+                {
+                    // Consider hashing the password here
+                    cmd.Parameters.AddWithValue("@firstname", firstnameText.Text);
+                    cmd.Parameters.AddWithValue("@lastname", lastnameText.Text);
+                    cmd.Parameters.AddWithValue("@email", emailText.Text);
+                    cmd.Parameters.AddWithValue("@password", passwordText.Text); // Hash this
+                    cmd.Parameters.AddWithValue("@confirmpass", confirmText.Text); // Hash this
+
+                    cmd.ExecuteNonQuery();
+                }
             }
-            }
+
+            MessageBox.Show("Registration successfully.");
+            ClearFields();
+        }
+
+        private void ClearFields()
+        {
+            firstnameText.Clear();
+            lastnameText.Clear();
+            emailText.Clear();
+            passwordText.Clear();
+            confirmText.Clear();
+        }
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -133,34 +163,47 @@ namespace UngDungChat1_1
         {
             if (string.IsNullOrEmpty(emailloginText.Text.Trim()))
             {
-                errorProvider1.SetError(emailloginText, "email is required");
+                errorProvider1.SetError(emailloginText, "Email is required");
                 return;
             }
             else
+            {
                 errorProvider1.SetError(emailloginText, string.Empty);
+            }
 
             if (string.IsNullOrEmpty(passwordloginText.Text.Trim()))
             {
-                errorProvider1.SetError(passwordloginText, "password is required");
+                errorProvider1.SetError(passwordloginText, "Password is required");
                 return;
             }
             else
             {
                 errorProvider1.SetError(passwordloginText, string.Empty);
             }
-            SqlConnection con = new SqlConnection(constring);
-            string q = "select * from Login WHERE login = '" + emailloginText.Text + "'AND password = '" + passwordloginText.Text + "'";
-            SqlCommand cmd = new SqlCommand(q, con);
-            SqlDataReader dataReader;
-            dataReader = cmd.ExecuteReader();
-            if (dataReader.HasRows == true)
+
+            using (SqlConnection con = new SqlConnection(constring))
             {
-                panel1.BringToFront();
-                timer1.Start();
+                con.Open();
+                string q = "SELECT * FROM Login WHERE email = @Email AND password = @Password";
+                using (SqlCommand cmd = new SqlCommand(q, con))
+                {
+                    cmd.Parameters.AddWithValue("@Email", emailloginText.Text);
+                    cmd.Parameters.AddWithValue("@Password", passwordloginText.Text);
+
+                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    {
+                        if (dataReader.HasRows)
+                        {
+                            panel1.BringToFront();
+                            timer1.Start();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please check your email and password");
+                        }
+                    }
+                }
             }
-                
-            else
-                MessageBox.Show("please check your email and password");
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
