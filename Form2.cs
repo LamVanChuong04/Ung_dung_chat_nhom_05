@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UngDungChat1_1.Properties;
 
 namespace UngDungChat1_1
 {
@@ -50,6 +51,34 @@ namespace UngDungChat1_1
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private bool check;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (check)
+            {
+                panel1.Width += 10;
+                if (panel1.Size == panel1.MaximumSize)
+                {
+                    pictureBox1.Left += 350;
+                    timer1.Stop();
+                    check = false;
+                    pictureBox1.Image = Resources.menu;
+                }
+            }
+            else
+            {
+                panel1.Width -=10;
+                if (panel1.Size == panel1.MaximumSize)
+                {
+                    pictureBox1.Left += 23;
+                    timer1.Stop();
+                    check = true;
+                    pictureBox1.Image = Resources.quaylai;
+                }
+            }
         }
     }
 }
