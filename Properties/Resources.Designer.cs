@@ -63,6 +63,16 @@ namespace UngDungChat1_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anh3cham {
+            get {
+                object obj = ResourceManager.GetObject("anh3cham", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap canhan1 {
             get {
                 object obj = ResourceManager.GetObject("canhan1", resourceCulture);

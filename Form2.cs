@@ -59,25 +59,43 @@ namespace UngDungChat1_1
         {
             if (check)
             {
+
                 panel1.Width += 10;
                 if (panel1.Size == panel1.MaximumSize)
                 {
-                    pictureBox1.Left += 350;
+                    pictureBox1.Left += 250;
                     timer1.Stop();
                     check = false;
-                    pictureBox1.Image = Resources.menu;
+                    pictureBox1.Image = Resources.quaylai;
                 }
             }
             else
             {
-                panel1.Width -=10;
-                if (panel1.Size == panel1.MaximumSize)
+
+                panel1.Width -= 10;
+                if (panel1.Size == panel1.MinimumSize)
                 {
-                    pictureBox1.Left += 23;
+                    pictureBox1.Left += 100;
                     timer1.Stop();
                     check = true;
-                    pictureBox1.Image = Resources.quaylai;
+                    pictureBox1.Image = Resources.menu;
                 }
+            }
+
+
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            if (panel4.Visible == false)
+            {
+                panel4.Visible = true;
+            }
+            else
+            {
+                panel4.Visible = false;
             }
         }
     }

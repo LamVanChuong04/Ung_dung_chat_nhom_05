@@ -9,3 +9,4 @@ C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.CoreCompileIn
 C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.CopyComplete
 C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.exe
 C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.pdb
+C:\Users\Can\Ung_dung_chat_nhom_05\bin\Debug\UngDungChat1_1.pdb
