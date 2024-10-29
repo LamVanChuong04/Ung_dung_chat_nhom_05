@@ -23,11 +23,11 @@ namespace UngDungChat1_1
             InitializeComponent();
         }
 
-        string constring = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string constring = "Data Source=DESKTOP-V1Q8O89\\MSSQLSERVER01;Initial Catalog=chat;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            label2.Text = "Email Name";
+            label2.Text = emailname;
             SqlConnection con = new SqlConnection(constring);
             con.Open();
             string q = "select * from login WHERE email = '" + label2.Text + "'";
@@ -63,7 +63,7 @@ namespace UngDungChat1_1
                 panel1.Width += 10;
                 if (panel1.Size == panel1.MaximumSize)
                 {
-                    pictureBox1.Left += 250;
+                    pictureBox1.Left += 350;
                     timer1.Stop();
                     check = false;
                     pictureBox1.Image = Resources.quaylai;
@@ -97,6 +97,16 @@ namespace UngDungChat1_1
             {
                 panel4.Visible = false;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
