@@ -94,7 +94,7 @@
             this.panel1.Controls.Add(this.passwordloginText);
             this.panel1.Controls.Add(this.emailloginText);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 82);
+            this.panel1.Location = new System.Drawing.Point(3, 66);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(603, 462);
             this.panel1.TabIndex = 2;
@@ -174,9 +174,9 @@
             this.panel2.Controls.Add(this.emailText);
             this.panel2.Controls.Add(this.lastnameText);
             this.panel2.Controls.Add(this.firstnameText);
-            this.panel2.Location = new System.Drawing.Point(3, 48);
+            this.panel2.Location = new System.Drawing.Point(3, 66);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(612, 461);
+            this.panel2.Size = new System.Drawing.Size(600, 458);
             this.panel2.TabIndex = 6;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -311,9 +311,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(-6, 515);
+            this.progressBar1.Location = new System.Drawing.Point(-6, 528);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(612, 23);
+            this.progressBar1.Size = new System.Drawing.Size(612, 10);
             this.progressBar1.TabIndex = 6;
             // 
             // Form1

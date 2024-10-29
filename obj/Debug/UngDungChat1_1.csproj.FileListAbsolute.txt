@@ -63,3 +63,16 @@ D:\Three_years\Lập trình mạng\Project\Ung_dung_chat_nhom_05\obj\Debug\UngDu
 D:\Three_years\Lập trình mạng\Project\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.CopyComplete
 D:\Three_years\Lập trình mạng\Project\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.exe
 D:\Three_years\Lập trình mạng\Project\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.pdb
+C:\Users\Can\Ung_dung_chat_nhom_05\bin\Debug\UngDungChat1_1.exe.config
+C:\Users\Can\Ung_dung_chat_nhom_05\bin\Debug\UngDungChat1_1.exe
+C:\Users\Can\Ung_dung_chat_nhom_05\bin\Debug\UngDungChat1_1.pdb
+C:\Users\Can\Ung_dung_chat_nhom_05\bin\Debug\Guna.UI2.dll
+C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.AssemblyReference.cache
+C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.Form1.resources
+C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.Form2.resources
+C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.Properties.Resources.resources
+C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.GenerateResource.cache
+C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.CoreCompileInputs.cache
+C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.CopyComplete
+C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.exe
+C:\Users\Can\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.pdb
