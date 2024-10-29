@@ -37,3 +37,15 @@ C:\Users\Can\Downloads\Ung_dung_chat_nhom_05\Ung_dung_chat_nhom_05\obj\Debug\Ung
 C:\Users\Can\Downloads\Ung_dung_chat_nhom_05\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.exe
 C:\Users\Can\Downloads\Ung_dung_chat_nhom_05\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.pdb
 >>>>>>> f02374fd534d6f9133aa058bbe782f15a89d7b08
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\bin\Debug\UngDungChat1_1.exe.config
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\bin\Debug\UngDungChat1_1.exe
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\bin\Debug\UngDungChat1_1.pdb
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.Form1.resources
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.Form2.resources
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.Properties.Resources.resources
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.GenerateResource.cache
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungC.38173F7B.Up2Date
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.exe
+C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.pdb
