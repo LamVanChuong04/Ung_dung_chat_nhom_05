@@ -37,7 +37,16 @@ namespace UngDungChat1_1
             SqlDataReader dataReader = cmd.ExecuteReader();
             dataReader.Read();
             if (dataReader.HasRows)
-                label2.Text = dataReader[0].ToString();
+            {
+                label2.Text = dataReader["email"].ToString();
+                textBox1.Text = dataReader["firstname"].ToString();
+                textBox2.Text = dataReader["lastname"].ToString();
+                textBox3.Text = dataReader["email"].ToString();
+                textBox4.Text = dataReader["password"].ToString();
+                
+            }
+                
+
             con.Close();
         }
 
@@ -53,6 +62,7 @@ namespace UngDungChat1_1
 
         }
 
+        // code gặp vấn đề ở phần này 56-86
 
         private bool check;
         private void timer1_Tick(object sender, EventArgs e)
@@ -82,9 +92,9 @@ namespace UngDungChat1_1
                 }
             }
 
-
-
         }
+
+        // ////////
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -99,14 +109,7 @@ namespace UngDungChat1_1
             }
         }
 
-        private void guna2Button4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        private void guna2Button6_Click_(object sender, EventArgs e)
-        {
-           
-        }
+        
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             
@@ -115,6 +118,18 @@ namespace UngDungChat1_1
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (panel5.Visible == false)
+            {
+                panel5.Visible = true;
+            }
+            else
+            {
+                panel5.Visible = false;
+            }
         }
     }
 }
