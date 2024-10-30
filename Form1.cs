@@ -36,8 +36,6 @@ namespace UngDungChat1_1
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             panel1.BringToFront();
-           
-            
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
@@ -226,6 +224,16 @@ namespace UngDungChat1_1
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
         {
 
         }
