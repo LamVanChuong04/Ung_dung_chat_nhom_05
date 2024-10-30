@@ -229,5 +229,30 @@ namespace UngDungChat1_1
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastnameText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailloginText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
