@@ -23,7 +23,7 @@ namespace UngDungChat1_1
             InitializeComponent();
         }
 
-        string constring = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string constring = "Data Source=DESKTOP-V1Q8O89\\MSSQLSERVER01;Initial Catalog=chat;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -130,6 +130,11 @@ namespace UngDungChat1_1
             {
                 panel5.Visible = false;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

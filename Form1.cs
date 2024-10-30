@@ -19,7 +19,7 @@ namespace UngDungChat1_1
         {
             InitializeComponent();
         }
-        string constring = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string constring = "Data Source=DESKTOP-V1Q8O89\\MSSQLSERVER01;Initial Catalog=chat;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
 
 
@@ -159,7 +159,7 @@ namespace UngDungChat1_1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(emailloginText.Text.Trim()))
             {
@@ -254,5 +254,52 @@ namespace UngDungChat1_1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(emailloginText.Text.Trim()))
+            {
+                errorProvider1.SetError(emailloginText, "Email is required");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(emailloginText, string.Empty);
+            }
+
+            if (string.IsNullOrEmpty(passwordloginText.Text.Trim()))
+            {
+                errorProvider1.SetError(passwordloginText, "Password is required");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(passwordloginText, string.Empty);
+            }
+
+            using (SqlConnection con = new SqlConnection(constring))
+            {
+                con.Open();
+                string q = "SELECT * FROM Login WHERE email = @Email AND password = @Password";
+                using (SqlCommand cmd = new SqlCommand(q, con))
+                {
+                    cmd.Parameters.AddWithValue("@Email", emailloginText.Text);
+                    cmd.Parameters.AddWithValue("@Password", passwordloginText.Text);
+
+                    using (SqlDataReader dataReader = cmd.ExecuteReader())
+                    {
+                        if (dataReader.HasRows)
+                        {
+                            panel1.BringToFront();
+                            timer1.Start();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please check your email and password");
+                        }
+                    }
+                }
+            }
+            }
     }
 }
