@@ -23,12 +23,11 @@ namespace UngDungChat1_1
             InitializeComponent();
         }
 
-        string constring = "Data Source=DESKTOP-V1Q8O89\\MSSQLSERVER01;Initial Catalog=chat;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string constring = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         private void Form2_Load(object sender, EventArgs e)
         {
             label2.Text = emailname;
-            byte[] getimage = new byte[0];
             SqlConnection con = new SqlConnection(constring);
             con.Open();
             string q = "select * from login WHERE email = '" + label2.Text + "'";
@@ -38,31 +37,10 @@ namespace UngDungChat1_1
             SqlDataReader dataReader = cmd.ExecuteReader();
             dataReader.Read();
             if (dataReader.HasRows)
-            {
-                label2.Text = dataReader["email"].ToString();
-                guna2TextBox1.Text = dataReader["fisrtname"].ToString();
-                guna2TextBox2.Text = dataReader["lastname"].ToString();
-                guna2TextBox3.Text = dataReader["email"].ToString();
-                guna2TextBox4.Text = dataReader["password"].ToString();
-
-                byte[] images = (byte[])dataReader["image"];
-                if (images == null)
-                {
-                    guna2CirclePictureBox1.Image = null;
-                    guna2CirclePictureBox2.Image = null;
-
-                }
-                else
-                {
-                    MemoryStream me = new MemoryStream(images);
-                    guna2CirclePictureBox1.Image = Image.FromStream(me);
-                    guna2CirclePictureBox2.Image = Image.FromStream(me);
-
-                }
-            }
+                label2.Text = dataReader[0].ToString();
             con.Close();
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             Form f1 = new Form();
@@ -127,14 +105,7 @@ namespace UngDungChat1_1
         }
         private void guna2Button6_Click_(object sender, EventArgs e)
         {
-            if (panel5.Visible == false)
-            {
-                panel5.Visible = true;
-            }
-            else
-            {
-                panel5.Visible = false;
-            }
+           
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
