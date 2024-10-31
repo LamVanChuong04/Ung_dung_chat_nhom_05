@@ -23,7 +23,11 @@ namespace UngDungChat1_1
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         string constring = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+=======
+        string constring = "Data Source=DESKTOP-VDMI65C;Initial Catalog=dd;Integrated Security=True;TrustServerCertificate=True";
+>>>>>>> 2964dfb871a66da666b73fb013736b89ff180b66
 
         private void Form2_Load(object sender, EventArgs e)
         {
