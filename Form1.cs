@@ -19,7 +19,7 @@ namespace UngDungChat1_1
         {
             InitializeComponent();
         }
-        string constring = "Data Source=DESKTOP-V1Q8O89\\MSSQLSERVER01;Initial Catalog=chat;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string constring = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
 
 
@@ -135,8 +135,9 @@ namespace UngDungChat1_1
                     cmd.Parameters.AddWithValue("@email", emailText.Text);
                     cmd.Parameters.AddWithValue("@password", passwordText.Text); // Hash this
                     cmd.Parameters.AddWithValue("@confirmpass", confirmText.Text); // Hash this
-
+                    con.Open() ;
                     cmd.ExecuteNonQuery();
+                    con.Close();
                 }
             }
 

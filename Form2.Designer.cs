@@ -29,23 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,14 +58,32 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -81,11 +103,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(96, 141);
+            this.label2.Location = new System.Drawing.Point(66, 141);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
@@ -97,10 +120,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.MaximumSize = new System.Drawing.Size(264, 450);
-            this.panel1.MinimumSize = new System.Drawing.Size(60, 450);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(264, 450);
+            this.panel1.Size = new System.Drawing.Size(264, 661);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox1
@@ -118,49 +139,96 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Location = new System.Drawing.Point(0, 178);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(261, 272);
+            this.panel2.Size = new System.Drawing.Size(261, 481);
             this.panel2.TabIndex = 4;
             // 
-            // button5
+            // panel7
             // 
-            this.button5.BackColor = System.Drawing.Color.Plum;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(5, 151);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(255, 36);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Help";
-            this.button5.UseVisualStyleBackColor = false;
+            this.panel7.Controls.Add(this.button10);
+            this.panel7.Controls.Add(this.button9);
+            this.panel7.Controls.Add(this.button8);
+            this.panel7.Controls.Add(this.button4);
+            this.panel7.Location = new System.Drawing.Point(3, 163);
+            this.panel7.MaximumSize = new System.Drawing.Size(256, 168);
+            this.panel7.MinimumSize = new System.Drawing.Size(256, 55);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(256, 168);
+            this.panel7.TabIndex = 7;
+            // 
+            // button10
+            // 
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.Location = new System.Drawing.Point(206, 1);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(50, 50);
+            this.button10.TabIndex = 7;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.PapayaWhip;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(12, 110);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(245, 51);
+            this.button9.TabIndex = 9;
+            this.button9.Text = "Update password";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.PapayaWhip;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(12, 55);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(243, 51);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "Update profile";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Plum;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(3, 110);
+            this.button4.Location = new System.Drawing.Point(12, 0);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(255, 36);
+            this.button4.Size = new System.Drawing.Size(249, 51);
             this.button4.TabIndex = 6;
             this.button4.Text = "Setting";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Plum;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(15, 107);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(246, 51);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Help";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Plum;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(3, 66);
+            this.button3.Location = new System.Drawing.Point(15, 52);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(255, 36);
+            this.button3.Size = new System.Drawing.Size(245, 51);
             this.button3.TabIndex = 5;
             this.button3.Text = "Chat";
             this.button3.UseVisualStyleBackColor = false;
@@ -170,19 +238,19 @@
             this.button2.BackColor = System.Drawing.Color.Plum;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 25);
+            this.button2.Location = new System.Drawing.Point(15, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(255, 36);
+            this.button2.Size = new System.Drawing.Size(246, 51);
             this.button2.TabIndex = 4;
             this.button2.Text = "Home";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // guna2CirclePictureBox1
             // 
-            this.guna2CirclePictureBox1.Image = global::UngDungChat1_1.Properties.Resources.canhan11;
+            this.guna2CirclePictureBox1.Image = global::UngDungChat1_1.Properties.Resources.canhan1;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(86, 60);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(87, 41);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -190,10 +258,6 @@
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 4;
             this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button6
             // 
@@ -212,16 +276,16 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(63, 2);
+            this.panel3.Location = new System.Drawing.Point(270, 2);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(737, 54);
+            this.panel3.Size = new System.Drawing.Size(761, 54);
             this.panel3.TabIndex = 5;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::UngDungChat1_1.Properties.Resources.anh3cham;
-            this.pictureBox2.Location = new System.Drawing.Point(649, -1);
+            this.pictureBox2.Location = new System.Drawing.Point(675, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(83, 52);
@@ -235,7 +299,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.button6);
             this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(659, 54);
+            this.panel4.Location = new System.Drawing.Point(890, 58);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(141, 127);
@@ -243,7 +307,8 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label6);
+            this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel5.Controls.Add(this.guna2CirclePictureBox2);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label3);
@@ -252,20 +317,22 @@
             this.panel5.Controls.Add(this.textBox3);
             this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Location = new System.Drawing.Point(270, 78);
+            this.panel5.Location = new System.Drawing.Point(396, 110);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(383, 344);
+            this.panel5.Size = new System.Drawing.Size(469, 375);
             this.panel5.TabIndex = 8;
             // 
-            // label6
+            // guna2CirclePictureBox2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(69, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(258, 32);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Thông tin cá nhân";
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(210, 21);
+            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(79, 61);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox2.TabIndex = 11;
+            this.guna2CirclePictureBox2.TabStop = false;
             // 
             // label5
             // 
@@ -341,12 +408,130 @@
             this.textBox1.TabIndex = 6;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(312, 215);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(243, 43);
+            this.textBox5.TabIndex = 0;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(312, 280);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(243, 43);
+            this.textBox6.TabIndex = 1;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(312, 347);
+            this.textBox7.Multiline = true;
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(243, 43);
+            this.textBox7.TabIndex = 2;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Lime;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(312, 421);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(243, 46);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "Save";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(140, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 29);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "First name";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(140, 294);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(132, 29);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Last name";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(140, 361);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(79, 29);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Email";
+            // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.Image = global::UngDungChat1_1.Properties.Resources.canhan1;
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(336, 103);
+            this.guna2CirclePictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(93, 76);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox3.TabIndex = 6;
+            this.guna2CirclePictureBox3.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.pictureBox3);
+            this.panel6.Controls.Add(this.guna2CirclePictureBox3);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.button7);
+            this.panel6.Controls.Add(this.textBox7);
+            this.panel6.Controls.Add(this.textBox6);
+            this.panel6.Controls.Add(this.textBox5);
+            this.panel6.Location = new System.Drawing.Point(270, 60);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(761, 601);
+            this.panel6.TabIndex = 9;
+            this.panel6.Visible = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 10;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::UngDungChat1_1.Properties.Resources.quaylai;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 536);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(57, 54);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1033, 661);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -359,12 +544,18 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,7 +571,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -394,6 +584,23 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
