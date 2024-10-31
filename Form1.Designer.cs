@@ -55,6 +55,7 @@
             this.passwordloginText = new System.Windows.Forms.TextBox();
             this.emailloginText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -103,7 +104,7 @@
             this.panel2.Controls.Add(this.emailText);
             this.panel2.Controls.Add(this.lastnameText);
             this.panel2.Controls.Add(this.firstnameText);
-            this.panel2.Location = new System.Drawing.Point(50, 80);
+            this.panel2.Location = new System.Drawing.Point(521, 80);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(514, 427);
             this.panel2.TabIndex = 6;
@@ -180,6 +181,7 @@
             this.confirmText.Location = new System.Drawing.Point(52, 298);
             this.confirmText.Multiline = true;
             this.confirmText.Name = "confirmText";
+            this.confirmText.PasswordChar = '*';
             this.confirmText.Size = new System.Drawing.Size(423, 42);
             this.confirmText.TabIndex = 5;
             // 
@@ -190,6 +192,7 @@
             this.passwordText.Location = new System.Drawing.Point(52, 226);
             this.passwordText.Multiline = true;
             this.passwordText.Name = "passwordText";
+            this.passwordText.PasswordChar = '*';
             this.passwordText.Size = new System.Drawing.Size(423, 42);
             this.passwordText.TabIndex = 4;
             // 
@@ -256,6 +259,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -307,6 +311,7 @@
             this.passwordloginText.Location = new System.Drawing.Point(52, 223);
             this.passwordloginText.Multiline = true;
             this.passwordloginText.Name = "passwordloginText";
+            this.passwordloginText.PasswordChar = '*';
             this.passwordloginText.Size = new System.Drawing.Size(398, 39);
             this.passwordloginText.TabIndex = 2;
             // 
@@ -328,6 +333,18 @@
             this.label1.Size = new System.Drawing.Size(91, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(288, 286);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(162, 24);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Show password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 
@@ -381,6 +398,7 @@
         private System.Windows.Forms.TextBox passwordloginText;
         private System.Windows.Forms.TextBox emailloginText;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

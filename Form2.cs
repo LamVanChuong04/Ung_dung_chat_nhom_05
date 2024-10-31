@@ -23,11 +23,11 @@ namespace UngDungChat1_1
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-        string constring = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
-=======
-        string constring = "Data Source=DESKTOP-VDMI65C;Initial Catalog=dd;Integrated Security=True;TrustServerCertificate=True";
->>>>>>> 2964dfb871a66da666b73fb013736b89ff180b66
+
+        string constring = "Data Source=DESKTOP-V1Q8O89\\MSSQLSERVER01;Initial Catalog=chat;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+       
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -244,6 +244,7 @@ namespace UngDungChat1_1
 
         private void button8_Click(object sender, EventArgs e)
         {
+            panel6.BringToFront();
             if (panel6.Visible == false)
             {
                 panel6.Visible = true;
@@ -255,6 +256,71 @@ namespace UngDungChat1_1
             if (panel6.Visible == true)
             {
                 panel6.Visible = false;
+            }
+        }
+        // SAVE update password
+        private void button11_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(constring))
+            {
+                con.Open();
+                string query = "UPDATE login SET Password = @newPassword WHERE email = @Email AND Password = @oldPassword";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@newPassword", textBox9.Text);
+                    cmd.Parameters.AddWithValue("@Email", label2.Text);
+                    cmd.Parameters.AddWithValue("@oldPassword", textBox8.Text);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Password has been changed.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No matching record found or password not changed.");
+                    }
+                }
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            panel8.BringToFront();
+            if (panel8.Visible == false)
+            {
+                panel8.Visible = true;
+            }
+        }
+        
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click_1(object sender, EventArgs e)
+        {
+            if (panel8.Visible == true)
+            {
+                panel8.Visible = false;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (textBox8.PasswordChar == '*' && textBox9.PasswordChar == '*' && textBox10.PasswordChar == '*')
+            {
+                textBox8.PasswordChar = '\0';
+                textBox9.PasswordChar = '\0';
+                textBox10.PasswordChar = '\0';
+            }
+            else
+            {
+                textBox8.PasswordChar = '*';
+                textBox9.PasswordChar = '*';
+                textBox10.PasswordChar = '*';
             }
         }
     }

@@ -19,12 +19,10 @@ namespace UngDungChat1_1
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-        string constring = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=dd;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
-=======
-        string constring = "Data Source=DESKTOP-VDMI65C;Initial Catalog=dd;Integrated Security=True;TrustServerCertificate=True";
->>>>>>> 2964dfb871a66da666b73fb013736b89ff180b66
 
+        string constring = "Data Source=DESKTOP-V1Q8O89\\MSSQLSERVER01;Initial Catalog=chat;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+
+        
 
 
         private void label2_Click(object sender, EventArgs e)
@@ -306,5 +304,17 @@ namespace UngDungChat1_1
                 }
             }
             }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (passwordloginText.PasswordChar == '*')
+            {
+                passwordloginText.PasswordChar = '\0';
+            }
+            else
+            {
+                passwordloginText.PasswordChar = '*';
+            }
+        }
     }
 }
