@@ -49,13 +49,13 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.passwordloginText = new System.Windows.Forms.TextBox();
             this.emailloginText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -104,7 +104,7 @@
             this.panel2.Controls.Add(this.emailText);
             this.panel2.Controls.Add(this.lastnameText);
             this.panel2.Controls.Add(this.firstnameText);
-            this.panel2.Location = new System.Drawing.Point(521, 80);
+            this.panel2.Location = new System.Drawing.Point(50, 80);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(514, 427);
             this.panel2.TabIndex = 6;
@@ -272,6 +272,18 @@
             this.panel1.Size = new System.Drawing.Size(514, 427);
             this.panel1.TabIndex = 7;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(288, 286);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(162, 24);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Show password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
@@ -333,18 +345,6 @@
             this.label1.Size = new System.Drawing.Size(91, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(288, 286);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(162, 24);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Show password";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 

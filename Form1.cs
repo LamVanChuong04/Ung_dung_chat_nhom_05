@@ -128,7 +128,7 @@ namespace UngDungChat1_1
             using (SqlConnection con = new SqlConnection(constring))
             {
                 con.Open();
-                string q = "INSERT INTO Login(firstname, lastname, email, password, confirmpass) VALUES (@firstname, @lastname, @email, @password, @confirmpass)";
+                string q = "INSERT INTO login(firstname, lastname, email, password, confirmpass) VALUES (@firstname, @lastname, @email, @password, @confirmpass)";
                 using (SqlCommand cmd = new SqlCommand(q, con))
                 {
                     // Consider hashing the password here

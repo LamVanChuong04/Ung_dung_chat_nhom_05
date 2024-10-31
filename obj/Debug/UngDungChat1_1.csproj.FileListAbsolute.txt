@@ -49,3 +49,5 @@ C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.csproj.Core
 C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungC.38173F7B.Up2Date
 C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.exe
 C:\Users\PC\Documents\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.pdb
+D:\Three_years\Lập trình mạng\Project\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.UserControl1.resources
+D:\Three_years\Lập trình mạng\Project\Ung_dung_chat_nhom_05\obj\Debug\UngDungChat1_1.UserControl2.resources

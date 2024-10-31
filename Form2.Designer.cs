@@ -67,20 +67,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControl11 = new UngDungChat1_1.UserControl1();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -91,11 +94,13 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -245,6 +250,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Chat";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -258,6 +264,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Home";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -491,19 +498,6 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Email";
             // 
-            // guna2CirclePictureBox3
-            // 
-            this.guna2CirclePictureBox3.Image = global::UngDungChat1_1.Properties.Resources.canhan1;
-            this.guna2CirclePictureBox3.ImageRotate = 0F;
-            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(336, 103);
-            this.guna2CirclePictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
-            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(93, 76);
-            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox3.TabIndex = 6;
-            this.guna2CirclePictureBox3.TabStop = false;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.pictureBox3);
@@ -533,6 +527,19 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.Image = global::UngDungChat1_1.Properties.Resources.canhan1;
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(336, 103);
+            this.guna2CirclePictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(93, 76);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2CirclePictureBox3.TabIndex = 6;
+            this.guna2CirclePictureBox3.TabStop = false;
+            // 
             // timer2
             // 
             this.timer2.Enabled = true;
@@ -554,75 +561,16 @@
             this.panel8.Size = new System.Drawing.Size(761, 601);
             this.panel8.TabIndex = 8;
             // 
-            // textBox8
+            // checkBox1
             // 
-            this.textBox8.Location = new System.Drawing.Point(312, 165);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.PasswordChar = '*';
-            this.textBox8.Size = new System.Drawing.Size(203, 37);
-            this.textBox8.TabIndex = 8;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(312, 230);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.PasswordChar = '*';
-            this.textBox9.Size = new System.Drawing.Size(203, 37);
-            this.textBox9.TabIndex = 8;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(312, 299);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.PasswordChar = '*';
-            this.textBox10.Size = new System.Drawing.Size(203, 37);
-            this.textBox10.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(91, 171);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(144, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Old password";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(91, 240);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 25);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "New password";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(91, 311);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(185, 25);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Confirm password";
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Lime;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(312, 392);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(203, 44);
-            this.button11.TabIndex = 10;
-            this.button11.Text = "SAVE";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(391, 352);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(124, 20);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Show password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // pictureBox4
             // 
@@ -636,16 +584,102 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
             // 
-            // checkBox1
+            // button11
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(391, 352);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(124, 20);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Show password";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.button11.BackColor = System.Drawing.Color.Lime;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(312, 392);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(203, 44);
+            this.button11.TabIndex = 10;
+            this.button11.Text = "SAVE";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(91, 311);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(185, 25);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Confirm password";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(91, 240);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(152, 25);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "New password";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(91, 171);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(144, 25);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Old password";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(312, 299);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.PasswordChar = '*';
+            this.textBox10.Size = new System.Drawing.Size(203, 37);
+            this.textBox10.TabIndex = 8;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(312, 230);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.PasswordChar = '*';
+            this.textBox9.Size = new System.Drawing.Size(203, 37);
+            this.textBox9.TabIndex = 8;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(312, 165);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.PasswordChar = '*';
+            this.textBox8.Size = new System.Drawing.Size(203, 37);
+            this.textBox8.TabIndex = 8;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.flowLayoutPanel1);
+            this.panel9.Location = new System.Drawing.Point(270, 58);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(761, 599);
+            this.panel9.TabIndex = 13;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.userControl11);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(415, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(346, 599);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // userControl11
+            // 
+            this.userControl11.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.userControl11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.userControl11.Location = new System.Drawing.Point(3, 3);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(340, 58);
+            this.userControl11.TabIndex = 0;
+            this.userControl11.Title = null;
             // 
             // Form2
             // 
@@ -653,6 +687,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1033, 661);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -675,13 +710,15 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -738,5 +775,8 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private UserControl1 userControl11;
     }
 }

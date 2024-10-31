@@ -249,6 +249,10 @@ namespace UngDungChat1_1
             {
                 panel6.Visible = true;
             }
+            if (panel8.Visible == true)
+            {
+                panel8.Visible = false;
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -284,13 +288,24 @@ namespace UngDungChat1_1
                 }
             }
         }
-
+        // update password
         private void button9_Click(object sender, EventArgs e)
         {
+
             panel8.BringToFront();
-            if (panel8.Visible == false)
+            if (panel8.Visible == false && panel6.Visible == false)
             {
                 panel8.Visible = true;
+                panel6.Visible = true;
+            }
+            if (panel6.Visible == true)
+            {
+                panel8.Visible = true;
+            }
+            if (panel9.Visible == true)
+            {
+                panel8.Visible = false;
+                panel6.Visible = true;
             }
         }
         
@@ -322,6 +337,74 @@ namespace UngDungChat1_1
                 textBox9.PasswordChar = '*';
                 textBox10.PasswordChar = '*';
             }
+        }
+        // chat
+        private void button3_Click(object sender, EventArgs e)
+        {
+            UserItem();
+            panel9.BringToFront();
+            if (panel9.Visible == false && panel8.Visible == false && panel6.Visible == false) {
+                panel6.Visible = true;
+                panel8.Visible = true;
+                panel9.Visible = true;
+
+
+            }
+            if (panel8.Visible == true)
+            {
+                panel6.Visible = false;
+                panel9.Visible = true;
+            }
+            if (panel6.Visible == true)
+            {
+                panel6.Visible= false;
+                panel8.Visible = true; 
+                panel9.Visible = true;
+            }
+        }
+        // home
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (panel6.Visible == true || panel8.Visible == true || panel9.Visible == true)
+            {
+                panel6.Visible = false; 
+                panel9.Visible = false;
+                panel8.Visible = false;
+
+            }
+        }
+
+        // 
+
+        private void UserItem()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            SqlDataAdapter adapter;
+            adapter = new SqlDataAdapter("select * from login", constring);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            if (table != null)
+            {
+                UserControl1[] userControls = new UserControl1[table.Rows.Count];
+                for (int i = 0; i<1; i++)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        userControls[i] = new UserControl1();
+                        userControls[i].Title = row["firstname"].ToString();
+                        if (userControls[i].Title == label1.Text)
+                        {
+                            flowLayoutPanel1.Controls.Remove(userControls[i]);
+                        }
+                        else
+                        {
+                            flowLayoutPanel1.Controls.Add(userControls[i]);
+                        }
+                        userControls[i].Click += new System.EventHandler(this.button3_Click);
+                    }
+                }
+            }
+
         }
     }
 }
