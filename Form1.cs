@@ -137,7 +137,7 @@ namespace UngDungChat1_1
                     cmd.Parameters.AddWithValue("@email", emailText.Text);
                     cmd.Parameters.AddWithValue("@password", passwordText.Text); // Hash this
                     cmd.Parameters.AddWithValue("@confirmpass", confirmText.Text); // Hash this
-                    con.Open() ;
+                    
                     cmd.ExecuteNonQuery();
                     con.Close();
                 }
