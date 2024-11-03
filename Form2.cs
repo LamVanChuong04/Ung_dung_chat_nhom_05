@@ -48,7 +48,6 @@ namespace UngDungChat1_1
 
                 textBox2.Text = dataReader["lastname"].ToString();
                 textBox6.Text = dataReader["lastname"].ToString();
-
                 textBox3.Text = dataReader["email"].ToString();
                 textBox7.Text = dataReader["email"].ToString();
 
@@ -118,14 +117,14 @@ namespace UngDungChat1_1
                 panel4.Visible = false;
             }
         }
-
-        
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
