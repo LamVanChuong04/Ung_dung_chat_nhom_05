@@ -146,7 +146,7 @@ namespace UngDungChat1_1
             MessageBox.Show("Registration successfully.");
             ClearFields();
         }
-
+        //dadsda
         private void ClearFields()
         {
             firstnameText.Clear();
