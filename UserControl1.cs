@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UngDungChat1_1
-{
+{   
+    //UserControl
     public partial class UserControl1 : UserControl
     {
         public UserControl1()
