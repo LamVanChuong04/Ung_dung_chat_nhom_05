@@ -405,5 +405,10 @@ namespace UngDungChat1_1
             }
 
         }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
