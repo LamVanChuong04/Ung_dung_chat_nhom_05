@@ -128,7 +128,7 @@ namespace UngDungChat1_1
         {
 
         }
-
+        //test commit
         private void button6_Click(object sender, EventArgs e)
         {
             if (panel5.Visible == false)
