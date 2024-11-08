@@ -156,7 +156,7 @@ namespace UngDungChat1_1
             confirmText.Clear();
         }
 
-
+        //Hello world
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
