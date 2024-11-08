@@ -1,4 +1,5 @@
 ﻿namespace UngDungChat1_1
+// asjbbgdfbijvjiv vbuidv ijsvbjidsvnkmbvvfbdsjvdsjivsju9dsgvjb
 {
     partial class UserControl1
     {
