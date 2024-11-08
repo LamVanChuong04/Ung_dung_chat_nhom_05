@@ -1,4 +1,6 @@
 ﻿namespace UngDungChat1_1
+// tui nè tui nè quẩy đê hú hú
+// hâh hâhha hâhha a
 {
     partial class Form1
     {
@@ -163,7 +165,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button3.BackColor = System.Drawing.Color.Cyan;
             this.button3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(52, 346);
