@@ -1,4 +1,6 @@
 ﻿namespace UngDungChat1_1
+// tui nè tui nè quẩy đê hú hú
+// hâh hâhha hâhha a
 {
     partial class Form1
     {
